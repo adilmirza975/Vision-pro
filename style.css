@@ -17,6 +17,9 @@ html,body{
   overflow: hidden; /* excess chize jo bhi bahar jaa rahi hai use hide kar dega*/
 }
 
+
+/* page */
+
 #page{
   position: relative;
   height: 100vh;
@@ -63,7 +66,7 @@ html,body{
   padding: 0.3vw;
   border: 1px solid black;
   border-radius: 50px;
-  border: n;
+  border: none;
 }
 #b{
   background-color: #fff;
@@ -129,75 +132,130 @@ html,body{
   padding: 0.5vh;
 }
 
-#page1{
+
+
+/* page1 */
+
+#page1 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(19, 18, 18);
+  background-color: rgb(19, 18, 18); 
+  overflow: hidden;
 }
-#v2{
-  position: relative;
+
+#page1 video {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
-
-#page1 #para1,#para2,#para3{
-  font-size: 2.5vw;
-  color: #fff;
-  z-index: 999;
-  font-weight: 600;
   position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  
+  top: 0;
+  left: 0;
+  z-index: 1; /* Keep video behind text */
 }
 
-#page1 #para2{
-  bottom: 30%;
-  padding-top: 5vw;
+#saman {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 135%);
+  text-align: center;
+  z-index: 99;  
+  color: white;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#page1 #para3{
-  bottom: 20%;
+
+#saman p {
+  font-size: 2.5vw;
+  font-weight: 500;
+  margin: 10px 0;
+  text-align: center; 
+  width: 70%;
+  margin-bottom: 2vw;
 }
+
+ 
+
+ 
+
 #page1 button{
   background-color: transparent;
   color: #ff5a00;
-  font-size: 1.5vw;
-  font-weight: 600;
+  font-size: 1.2vw;
+  font-weight: 400;
   z-index: 999;
-  border: 4px solid #ff5a00;
+  border: 3px solid #ff5a00;
   border-radius: 50px;
-  padding: 0.5vw 1.5vw;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
+  padding: 0.8vw 1.8vw; 
+  bottom: 5%;
+ 
 }
 
-#page2{
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(231, 129, 129);
+#page1 button:hover{
+  background-color: #ff5a00;
+  color: #fff;
 }
+
+
+/* page2 */
+
+#page2 {
+  position: relative;
+  height: 100vh;  
+  width: 100vw;
+  background-color: #fff;
+}
+#page2 img{
+  width: 55%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-40%);
+}
+
+#page2 #page2-upper{
+  position: absolute;
+  width: 35%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: burlywood;
+
+}
+
+#page2 button{
+  border: 3px solid black;
+  border-radius: 50px;
+  padding: 1vw 2vw;
+  font-size: 1vw;
+  font-weight: 450;
+  position: absolute;
+  bottom: 17%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* page3 */
 
 #page3{
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(62, 233, 91);
-}
-
-#page3 #likha{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-
 }
   
 #page3 video{
@@ -206,22 +264,98 @@ html,body{
   object-fit: cover;
 }
 
-#page3 h1{
+#page3 h1,h5{
 
   font-size: 5vw;
   color: #fff;
-  position: relative;
-  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translateX(-50%);
+  text-align: center;  z-index: 999;
   font-weight: 800;
 }
 
 #page3 h5{
 
-  font-size: 2vw;
+  font-size: 1.8vw;
   color: #fff;
-  position: relative;
+  position: absolute;
+  top: 45%;
   z-index: 999;
   font-weight: 800;
+  
 
+} 
+
+#page3-written{
+  display:flex;
+  position: relative;
+  height: 60vh;
+  width: 100vw;
+  background-color: #fff;
+}
+.left3{
+  position: relative;
+  height: 100%;
+  width: 50%;
+  /* background-color: blue; */
+}
+.left3 h1{
+  font-size: 2.3vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
 }
 
+.right3{
+  height: 100%;
+  width: 50%;
+  /* background-color: rgb(255, 247, 0); */
+}
+  
+.right3 h3{
+  padding-left: 4vw;
+  font-size: 1.5vw;
+  position: absolute;
+  font-weight: 500;
+  left: 65%;
+  transform: translateX(-50%);
+  top: 10%;
+  color: gray;
+}
+
+  
+.right3 button{
+  border: none;
+  border-radius: 50px;
+  padding: 1vw 2vw;
+  font-size: 1vw;
+  font-weight: 450;
+  background-color: #ff5a00;
+  color: #fff;
+  font-size: 1.3vw;
+  position: absolute;
+  bottom: 20%;
+  margin-left: 1.2%;
+}
+
+
+
+
+/* page 4 */
+
+#page4{
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  height: 70vh;
+  width: 100vw;
+  background-color: #f5f5f7;
+}
+  
