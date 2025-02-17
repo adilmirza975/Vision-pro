@@ -39,6 +39,12 @@ function loco() {
 }
 loco();
 
+
+
+
+
+
+
 // text animation--
 var tl = gsap.timeline({
   scrollTrigger: {
@@ -50,10 +56,20 @@ var tl = gsap.timeline({
   },
 });
 
+
+
+
+
+
+
 // page1 animation--
 tl.to("#page1 #saman,#page1 button", {
   top: `-95%`,
 });
+
+
+
+
 
 
 // page2 animation--
@@ -71,10 +87,6 @@ var tl = gsap.timeline({
 tl.to("#page3 h1 ,#page3 h5", {
   top: `-50%`,
 });
-
-
-
-
 
 
 
@@ -380,7 +392,11 @@ canvas();
 
 
 
+
+
 // canvas vision pro
+
+
 function canvas1(){
   const canvas = document.querySelector("#page16 canvas");
 const context = canvas.getContext("2d");
@@ -492,3 +508,61 @@ end: `80% top`,
 });
 }
 canvas1();
+
+
+
+
+
+
+// page19 glowing effect
+var tl3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: `#page19`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `#main`,
+    pin: true,
+  },
+});
+
+tl3.to("#page19 #troff", {
+  opacity:0
+  })
+
+
+
+
+
+
+// page20 effect glowing
+var tl4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: `#page20`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `#main`,
+    pin: true,
+  },
+});
+
+tl4.to("#page20 #troff", {
+  opacity:0
+  })
+
+
+
+
+
+
+// page21 effect
+  gsap.to("#page21 img",{
+    scrollTrigger: {
+      trigger: `#page21 img`,
+      start: `top bottom`,
+      end:`bottom 60%`,
+      scrub:.5,
+      scroller: `#main`,
+    },
+    opacity:1
+  });
+      
